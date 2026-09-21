@@ -1,0 +1,58 @@
+body {
+    background: #fbf2d5;
+    font-family: "Nunito", sans-serif;
+    accent-color: #7fa99b
+    
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #394a51;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #394a51;
+    font-weight: normal;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #e08f66;
+
+}
+
+button {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 20px;
+    font-size: 16px;
+    background-color: #7fa99b;
+    color: #fff;
+    border: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="text"] {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #394a51;
+    font-weight: thin;
+    padding: 300px;
+    font-size: 12px;
+}
