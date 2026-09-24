@@ -5,6 +5,14 @@ body {
     
 }
 
+.container {
+  max-width: 600px;
+  margin: 120px auto;
+  padding: 20px;
+  background: #f6f6f4;
+  border-radius: 10px;
+}
+
 h1 {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
@@ -17,16 +25,18 @@ h2 {
     font-family: 'Quicksand', sans-serif;
     color: #394a51;
     font-weight: normal;
+    margin-top: 25px;
 }
 
 h3 {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: #e08f66;
+    
 
 }
 
-button {
+.button {
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -62,7 +72,7 @@ footer {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: #394a51;
-    font-weight: thin;
-    padding: 300px;
+    font-weight: 300;
+    margin-top: 100px;
     font-size: 12px;
 }
