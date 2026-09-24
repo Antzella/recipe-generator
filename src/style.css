@@ -1,5 +1,5 @@
 body {
-    background: #fbf2d5;
+    background: #f5f1e4;
     font-family: "Nunito", sans-serif;
     accent-color: #7fa99b
     
@@ -30,7 +30,8 @@ button {
     text-align: center;
     display: block;
     margin: 0 auto;
-    padding: 20px 20px;
+    margin-top: 20px;
+    padding: 10px 10px;
     font-size: 16px;
     background-color: #7fa99b;
     color: #fff;
@@ -38,6 +39,15 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#recipe {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 20px;
+    color: #394a51;
+    font-weight: normal;
+}
+
 input[type="text"] {
     text-align: center;
     display: block;
