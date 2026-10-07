@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI recipe generator</title>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
    <link rel="stylesheet" href="src/style.css">
-    
 </head>
 <body>
     <div class="container">
@@ -19,13 +19,13 @@
 
 
     <main>
-<form>
+<form id="ingredients-form">
     <input type="text" placeholder="Type here" 
     autofocus required autocomplete="off" 
     id="ingredients" class="prompt"/>
     <button class="button">Give me a recipe!</button>
     </form>
-        <div id="recipe">
+        <div class= "recipe" id="recipe">
         The recipe will appear here!
         <br /> 
         And here.
@@ -37,6 +37,7 @@
     </footer>
     </main>
 </div>
+<script src="src/script.js"></script>
 </body>
 </html>
 
