@@ -1,14 +1,38 @@
-function generateRecipe(event) {
-event.preventDefault();
+function displayRecipe(response) {
+  console.log("Recipe generated successfully!");
+  console.log(typeof response.data.answer, response.data.answer);
 
-
-new Typewriter('#recipe', {
-  strings: ['Your recipe will appear here!'],
-  autoStart: true,
-  delay: 20,
-  cursor: '',
-});
+  new Typewriter("#recipe", {
+    strings: [response.data.answer],
+    autoStart: true,
+    delay: 10,
+    cursor: "",
+    loop: false,
+    deleteSpeed: Infinity,
+  });
 }
-let recipeForm = document.querySelector("#ingredients-form"); 
-recipeForm.addEventListener("submit", generateRecipe);
 
+function handleError(error) {
+  console.log("Error:", error);
+}
+
+function generateRecipe(event) {
+  console.log("Form submitted!");
+  event.preventDefault();
+
+  let instructionsInput = document.querySelector("#user-ingredients");
+  let apiKey = "c2956837ba5cd37d3f08f4dft6ba2b6o"; 
+  let context = "You are a professional chef. You will be given a list of ingredients. You will generate a simple recipe in basic HTML using tags like h3, ul, ol, li and strong. Do NOT include markdown code blocks, html, head, or body tags. The recipe should be easy to follow and in English.";
+  let prompt = `Generate a simple recipe for home cooks using only the following ingredients: ${instructionsInput.value}`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(context)}&key=${apiKey}`;
+
+  console.log("Generating recipe...");
+  console.log(`Prompt: ${prompt}`); 
+  console.log(`Context: ${context}`); 
+
+  axios.get(apiUrl).then(displayRecipe).catch(handleError);
+}
+
+let recipeForm = document.querySelector("#ingredients-form"); 
+console.log(recipeForm);
+recipeForm.addEventListener("submit", generateRecipe);
