@@ -1,6 +1,5 @@
 function displayRecipe(response) {
-  console.log("Recipe generated successfully!");
-  console.log(typeof response.data.answer, response.data.answer);
+  
 
   new Typewriter("#recipe", {
     strings: [response.data.answer],
@@ -13,11 +12,11 @@ function displayRecipe(response) {
 }
 
 function handleError(error) {
-  console.log("Error:", error);
+
 }
 
 function generateRecipe(event) {
-  console.log("Form submitted!");
+
   event.preventDefault();
 
   let instructionsInput = document.querySelector("#user-ingredients");
@@ -26,13 +25,11 @@ function generateRecipe(event) {
   let prompt = `Generate a simple recipe for home cooks using only the following ingredients: ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(context)}&key=${apiKey}`;
 
-  console.log("Generating recipe...");
-  console.log(`Prompt: ${prompt}`); 
-  console.log(`Context: ${context}`); 
+ 
 
   axios.get(apiUrl).then(displayRecipe).catch(handleError);
 }
 
 let recipeForm = document.querySelector("#ingredients-form"); 
-console.log(recipeForm);
+
 recipeForm.addEventListener("submit", generateRecipe);
